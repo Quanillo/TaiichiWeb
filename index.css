@@ -1,35 +1,43 @@
+.example::-webkit-scrollbar {
+    display: none;
+}
+
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 html{
+    height: 100%;
+    width: 100%;
     scroll-behavior: smooth;
     background-color: rgb(48, 1, 13);
 }
 
-header .container{
-
+body{
+    height: 100hv;
+    width: 100wv;
 }
 
-header{
+#main div{
+    width: 100wv;
+    height: 100hv;
+}
+
+#header{
+    position: absolute;
+    width: 100%;
     background-color: rgb(48, 1, 13);
 }
 
-header .logo{
+#header .logo{
     color: whitesmoke;
     margin: 0;
     padding: 25px 30px;
     display: table-cell;
 }
 
-header .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    display: table;
-}
-
-header nav{
+#header nav{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -37,18 +45,25 @@ header nav{
     display: table-cell;
 }
 
-header a{
+#header a{
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: burlywood;
 }
 
-#hero{
+.container{
+    scroll-snap-align: start;
+    height: 20%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hero{
+    display: flex;
     justify-content: center;
-    text-align: end;
     height: 100vh;
     color: burlywood;
     background-image: linear-gradient(
