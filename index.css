@@ -67,9 +67,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     height: 100vh;
-    color: burlywood;
     background-image: linear-gradient(
         0deg, 
         rgba(0,0,0,0.5),
@@ -79,6 +77,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+}
+
+#hero p {
+    position: absolute;
+    bottom: 10%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 #siono{

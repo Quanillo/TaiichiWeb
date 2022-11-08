@@ -25,10 +25,10 @@
             </div>
 
             <div id="siono">
-                <div class="container"><form class="form" id="form">
+                <div class="container">
                     <h1>¿Si o no Taiichi Ohno?</h1><br>
                     <p>Oh, adorado Taiichi, imploramos tu afirmación o tu negación ante semejante disyuntiva.</p>
-                    <form class="form" id="form">
+                    <form class="form" id="formSiono">
                         <input type="text" id="preguntaSiono">
                         <input type="submit" name="enviar" value="Implorar sentencia">
                     </form>
@@ -39,10 +39,10 @@
                 <div class="container">
                     <h1>La mano de Dios</h1><br>
                     <p>Oh, adorado Taiichi, imploramos que prestes tu santificada mano para ayudarnos a elegir entre tantas alternativas que el destino ha puesto frente a nosotros.</p>
-                    <form>
+                    <form class="form" id="formManodedios">
                         <input type="text" id="preguntaManodedios">
-                        <button>Añadir opción</button>
-                        <button>Implorar dictamen</button>
+                        <input type="submit" name="enviar" value="Añadir">
+                        <input type="button" name="enviarOpciones" onclick="manodediosChoice()" value="Implorar dictamen">
                     </form>
                 </div>    
             </div>
@@ -51,9 +51,9 @@
                 <div class="container">
                     <h1>Taiichi ilumina</h1><br>
                     <p>Oh, adorado Taiichi, imploramos tu iluminación, que tanto necesitamos, para tan trascendental incógnita.</p>
-                    <form>
+                    <form class="form" id="formIlumina">
                         <input type="text" id="preguntaIlumina">
-                        <button>Implorar réplica</button>
+                        <input type="submit" name="enviar" value="Implorar réplica">
                     </form>
                 </div>    
             </div>
