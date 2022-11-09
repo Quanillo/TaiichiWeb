@@ -1,3 +1,7 @@
+/* ESTILOS NORMALES (para móviles en vertical)
+   ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&display=swap');
+
 .example::-webkit-scrollbar {
     display: none;
 }
@@ -15,107 +19,149 @@ html{
 }
 
 body{
-    height: 100hv;
-    width: 100wv;
+    height: 100;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
 }
 
-#main div{
-    width: 100wv;
-    height: 100hv;
-}
-
-#header{
+header{
     position: fixed;
     width: 100%;
-    background-color: rgb(48, 1, 13);
+    padding: 0.5em;
+    background-color: burlywood;
+    display: grid;
+    justify-content: space-evenly;
+    gap: 4px;
+    grid-auto-flow: column;
 }
 
-#header #logo{
-    color: whitesmoke;
-    text-decoration: none;
-    margin: 0;
-    padding: 25px 30px;
-    display: table-cell;
+#logo img{
+    height: 3.7em;
+    width: 4em;
 }
-
-#header nav{
-    display: flex;
-    position: center;
-    flex-direction: column;
-    padding-bottom: 25px;
-    display: table-cell;
-}
-
-#header .sections{
-    padding: 5px 12px;
+.sections{
+    padding-top: 1em;
     text-decoration: none;
     font-weight: bold;
-    color: burlywood;
+    color: rgb(48, 1, 13);
 }
-
-.container{
-    scroll-snap-align: start;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
 #hero{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(
-        0deg, 
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("images/TaiichiPaint.jpeg");
+    background-color: rgb(48, 1, 13);
+    background-size: 41em 40em ;
+    background-image: url("images/TaiichiPaintTransparent.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
+    background-position: bottom right;
+    background-attachment: fixed;
+    background-size: 70% auto;
 }
 
-#hero p {
-    position: absolute;
-    bottom: 10%;
+
+#title, #msg{
+    //position: absolute;
+    bottom: 80%;
+    left: 5%;
     color: whitesmoke;
     text-align: center;
     font-size: 1.5em;
 }
 
+
 #siono{
-    background-color: burlywood;
-    color: rgb(48, 1, 13);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     height: 100vh;
+    background-color: burlywood;
+    color: rgb(48, 1, 13); 
+    background-image: url("images/TaiichiComunistaTransparent.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+    background-size: 70% auto;
 }
 
 #manodedios{
+    display: flex;
+    height: 100vh;
     background-color: rgb(48, 1, 13);
     color: burlywood;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
+    background-image: url("images/TaiichiDiosTransparent.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+    background-size: 80% auto;
 }
 
 #ilumina{
+    display: flex;
+    height: 100vh;
     background-color: burlywood;
     color: rgb(48, 1, 13);
+    background-image: url("images/TaiichiBossTransparent.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+    background-size: 70% auto;
+}
+
+.container{
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
+    
+}
+
+
+/* RESPONSIVE
+   ========================================================================= /*/
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- /*/
+@media (min-width: 768px) { 
+    #hero{
+        background-size: 60% auto;
+    }
+    #siono, #manodedios, #ilumina{
+        background-size: 50% auto;
+    }
+    #hero p{
+        right: 5%;
+        bottom: 75%;
+    }
+
+}
+ 
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- /*/
+@media (min-width: 1024px) { 
+    #hero{
+        background-size: 50% auto;
+    }
+    #siono, #manodedios, #ilumina{
+        background-size: 40% auto;
+    }
+    #hero p{
+        right: 5%;
+        right: 40%;
+    }
+
+}
+ 
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media (min-width: 1200px) { 
+    #hero{
+        background-size: 40% auto;
+    }
+    #siono, #manodedios, #ilumina{
+        background-size: 40% auto;
+    }
+    #hero p{
+        right: 5%;
+        right: 40%;
+    }
 }

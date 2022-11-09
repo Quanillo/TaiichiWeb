@@ -1,8 +1,8 @@
 let msg = document.getElementById('msg');
-let title = document.getElementById('title');
 let formSiono = document.getElementById('formSiono');
 let formManodedios = document.getElementById('formManodedios');
 let formIlumina = document.getElementById('formIlumina');
+let text = '';
 
 //SIONO
 function submitSiono(e) {
@@ -15,7 +15,6 @@ formSiono.addEventListener("submit", submitSiono);
 
 function sionoResponse (question){
   let n = Math.round(Math.random() * (2 - 1) + 1);
-  title.remove();
   if(n%2==0){
     msg.innerHTML = question + '? <br> SI.';
   }
@@ -35,13 +34,13 @@ formManodedios.addEventListener("submit", submitManodedios);
 const manodediosOptions = [];
 
 function manodediosResponse (question){
-  title.remove();
   manodediosOptions.push(question);
+  console.log(manodediosOptions);
 }
 
 function manodediosChoice (){
   let n = Math.round(Math.random() * (manodediosOptions.length - 0) + 0);
-  msg.innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[n];
+  msg.innerHTML = 'Elección suprema: ' + '<br>' + manodediosOptions[n];
   window.location = "#hero";
 }
 
@@ -55,9 +54,8 @@ function submitIlumina(e) {
 formIlumina.addEventListener("submit", submitIlumina);
 
 function iluminaResponse (question){
-  title.remove();
-  let n = Math.round(Math.random() * (iluminaOptions.length - 1) + 1);
-  msg.innerHTML = question + '?<br>' + iluminaOptions[n];
+  let n = Math.round(Math.random() * (iluminaOptions.length - 0) + 0);
+  msg.innerHTML = question + '<br>' + iluminaOptions[n];
 }
 
 const iluminaOptions = [
