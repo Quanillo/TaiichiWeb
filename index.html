@@ -9,64 +9,68 @@
     <title>Preguntale a Taiichi</title>
 </head>
 
-<body>
-
-   
-        
+<body>   
         <!--<div id="home"></div>-->
+        
             <header>
                 <a id="logo" href="#hero"><img src="/images/TaiichiPaintCara.png"></a>
                 <a class="sections" href="#siono">Si o no</a>
                 <a class="sections" href="#manodedios">Mano de Dios</a>
                 <a class="sections" href="#ilumina">Taiichi ilumina</a>
             </header>
-    
+        
         
         <div id="hero">
             <div class="container">
-                <p id="msg"></p><br>
-                <h1 id="title">Preguntale a Taiichi!</h1>
+                <div id="textHero">
+                    <p id="msg"></p><br>
+                    <h1 id="title">Preguntale a Taiichi!</h1>
+                </div>
+                
             </div>
         </div>
 
         <div id="siono">
             <div class="container">
-                <h1>¿Si o no Taiichi Ohno?</h1><br>
-                <p>Oh, adorado Taiichi, imploramos tu afirmación o tu negación ante semejante disyuntiva.</p>
-                <form class="form" id="formSiono">
-                    <input type="text" id="preguntaSiono">
-                    <input type="submit" name="enviar" value="Implorar sentencia">
-                </form>
+                <div id="contSiono">
+                    <h1>¿Si o no Taiichi Ohno?</h1><br>
+                    <p>Oh, adorado Taiichi, imploramos tu afirmación o tu negación ante semejante disyuntiva.</p>
+                    <form class="form" id="formSiono">
+                        <input type="text" id="preguntaSiono">
+                        <input type="submit" name="enviar" value="Implorar sentencia">
+                    </form>
+                </div>
             </div>
         </div>
 
         <div id="manodedios">
             <div class="container">
-                <h1>La mano de Dios</h1><br>
-                <p>Oh, adorado Taiichi, imploramos que prestes tu santificada mano para ayudarnos a elegir entre tantas
-                    alternativas que el destino ha puesto frente a nosotros.</p>
-                <form class="form" id="formManodedios">
-                    <input type="text" id="preguntaManodedios">
-                    <input type="submit" name="enviar" value="Añadir">
-                    <input type="button" name="enviarOpciones" onclick="manodediosChoice()" value="Implorar dictamen">
-                </form>
+                <div id="contManodedios">
+                    <h1>La mano de Dios</h1><br>
+                    <p>Oh, adorado Taiichi, imploramos que prestes tu santificada mano para ayudarnos a elegir entre tantas
+                        alternativas que el destino ha puesto frente a nosotros.</p>
+                    <form class="form" id="formManodedios">
+                        <input type="text" id="preguntaManodedios">
+                        <input type="submit" name="enviar" value="Añadir">
+                        <input type="button" name="enviarOpciones" onclick="manodediosChoice()" value="Implorar dictamen">
+                    </form>
+                </div>
             </div>
         </div>
 
         <div id="ilumina">
             <div class="container">
-                <h1>Taiichi ilumina</h1><br>
-                <p>Oh, adorado Taiichi, imploramos tu iluminación, que tanto necesitamos, para tan trascendental
-                    incógnita.</p>
-                <form class="form" id="formIlumina">
-                    <input type="text" id="preguntaIlumina">
-                    <input type="submit" name="enviar" value="Implorar réplica">
-                </form>
-
+                <div id="contIlumina">
+                    <h1>Taiichi ilumina</h1><br>
+                    <p>Oh, adorado Taiichi, imploramos tu iluminación, que tanto necesitamos, para tan trascendental
+                        incógnita.</p>
+                    <form class="form" id="formIlumina">
+                        <input type="text" id="preguntaIlumina">
+                        <input type="submit" name="enviar" value="Implorar réplica">
+                    </form>
+                </div>
             </div>
         </div>
-
- 
 
     <script src="/index.js"></script>
 </body>

@@ -23,61 +23,89 @@ body{
     width: 100%;
     font-family: 'Nunito', sans-serif;
 }
+div{
+    position: relative;
+}
+
+#home{
+    position: fixed;
+    width: auto;
+    padding: auto;
+}
 
 header{
     position: fixed;
-    width: 100%;
-    padding: 0.5em;
-    background-color: burlywood;
+    padding: 0.3em;
+    background-color: rgb(48, 1, 13);
     display: grid;
     justify-content: space-evenly;
     gap: 4px;
     grid-auto-flow: column;
+    left:0;
+    right:0;
+    top:0;
+    z-index:3;
 }
 
-#logo img{
-    height: 3.7em;
-    width: 4em;
+img{
+    height: 3.3em;
+    width: 3.7em;
 }
 .sections{
     padding-top: 1em;
+    font-size: 1em;
     text-decoration: none;
     font-weight: bold;
-    color: rgb(48, 1, 13);
+    color: burlywood;
 }
+.sections:hover{
+    font-size: 1.1em;
+    text-decoration: underline burlywood;
+    text-underline-offset: 0.5rem;
+}
+
+
 #hero{
     display: flex;
     height: 100vh;
     background-color: rgb(48, 1, 13);
     background-size: 41em 40em ;
-    background-image: url("images/TaiichiPaintTransparent.png");
+    background-image: url("images/TaiichiBossTransparent.png");
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom left;
     background-attachment: fixed;
-    background-size: 70% auto;
+    background-size: 80% auto;
 }
-
+#textHero{
+    position: absolute;
+    left: 30%;
+    right: 10%;
+    top: 15%;
+}
 
 #title, #msg{
-    //position: absolute;
-    bottom: 80%;
-    left: 5%;
     color: whitesmoke;
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
 }
-
 
 #siono{
     display: flex;
     height: 100vh;
     background-color: burlywood;
     color: rgb(48, 1, 13); 
-    background-image: url("images/TaiichiComunistaTransparent.png");
+    background-image: url("images/TaiichiDiosTransparent.png");
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom right;
     background-attachment: fixed;
-    background-size: 70% auto;
+    background-size: 90% auto;
+}
+
+#contSiono{
+    position: absolute;
+    margin: 2em;
+    top: 20%;
+    left: 5%;
+    right:10%;
 }
 
 #manodedios{
@@ -85,11 +113,19 @@ header{
     height: 100vh;
     background-color: rgb(48, 1, 13);
     color: burlywood;
-    background-image: url("images/TaiichiDiosTransparent.png");
+    background-image: url("images/TaiichiComunistaTransparent.png");
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom left;
     background-attachment: fixed;
-    background-size: 80% auto;
+    background-size: 70% auto;
+}
+
+#contManodedios{
+    position: absolute;
+    margin: 2em;
+    top: 20%;
+    right: 5%;
+    left:10%;
 }
 
 #ilumina{
@@ -97,11 +133,19 @@ header{
     height: 100vh;
     background-color: burlywood;
     color: rgb(48, 1, 13);
-    background-image: url("images/TaiichiBossTransparent.png");
+    background-image: url("images/TaiichiPaintTransparent.png");
     background-repeat: no-repeat;
-    background-position: bottom left;
+    background-position: bottom right;
     background-attachment: fixed;
-    background-size: 70% auto;
+    background-size: 60% auto;
+}
+
+#contIlumina{
+    position: absolute;
+    margin: 2em;
+    top: 20%;
+    left: 5%;
+    right:10%;
 }
 
 .container{
@@ -115,7 +159,6 @@ header{
     
 }
 
-
 /* RESPONSIVE
    ========================================================================= /*/
  
@@ -125,14 +168,25 @@ header{
     #hero{
         background-size: 60% auto;
     }
-    #siono, #manodedios, #ilumina{
-        background-size: 50% auto;
+    #siono{
+        background-size: 70% auto;
+    }
+    #manodedios{
+        background-size: 60% auto;
+    }
+    #ilumina{
+        background-size: 40% auto;
     }
     #hero p{
         right: 5%;
         bottom: 75%;
     }
-
+    #title, #msg{
+        font-size: 1.2em;
+    }
+    #textHero{
+        right: 10%;
+    }
 }
  
 /* Tablets en horizonal y escritorios normales
@@ -141,14 +195,18 @@ header{
     #hero{
         background-size: 50% auto;
     }
-    #siono, #manodedios, #ilumina{
+    #siono{
+        background-size: 60% auto;
+    }
+    #manodedios{
+        background-size: 50% auto;
+    }
+    #ilumina{
         background-size: 40% auto;
     }
-    #hero p{
-        right: 5%;
-        right: 40%;
+    #title, #msg{
+        font-size: 1.4em;
     }
-
 }
  
 /* Escritorios muy anchos
@@ -157,11 +215,27 @@ header{
     #hero{
         background-size: 40% auto;
     }
-    #siono, #manodedios, #ilumina{
+    #siono{
+        background-size: 50% auto;
+    }
+    #manodedios{
         background-size: 40% auto;
+    }
+    #ilumina{
+        background-size: 30% auto;
     }
     #hero p{
         right: 5%;
         right: 40%;
+    }
+    #title, #msg{
+        font-size: 1.6em;
+    }
+    #textHero{
+        left: 30%;
+        right: 5%;
+    }
+    #contSiono{
+        
     }
 }

@@ -36,6 +36,8 @@ const manodediosOptions = [];
 
 function manodediosResponse (question){
   title.remove();
+  formManodedios.value = "";
+  document.getElementById('preguntaManodedios').value = "";
   manodediosOptions.push(question);
 }
 
