@@ -16,11 +16,14 @@ formSiono.addEventListener("submit", submitSiono);
 function sionoResponse (question){
   let n = Math.round(Math.random() * (2 - 1) + 1);
   title.remove();
-  if(n%2==0){
-    msg.innerHTML = question + '? <br> SI.';
+  if(question.length>400){
+    msg.innerHTML = 'Mucho texto. Sintentiza.';
+  }
+  else if(n%2==0){
+    msg.innerHTML = question + '<br> SI.';
   }
   else{
-    msg.innerHTML = question + '? <br> NO.';
+    msg.innerHTML = question + '<br> NO.';
   }
 }
 
@@ -58,8 +61,13 @@ formIlumina.addEventListener("submit", submitIlumina);
 
 function iluminaResponse (question){
   title.remove();
-  let n = Math.round(Math.random() * (iluminaOptions.length - 1) + 1);
-  msg.innerHTML = question + '?<br>' + iluminaOptions[n];
+  if(question.length>400){
+    msg.innerHTML = 'Mucho texto. Sintentiza.';
+  }
+  else{
+    let n = Math.round(Math.random() * (iluminaOptions.length - 1) + 1);
+    msg.innerHTML = question + '<br>' + iluminaOptions[n];
+  }
 }
 
 const iluminaOptions = [

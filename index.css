@@ -2,12 +2,12 @@
    ========================================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&display=swap');
 .color1{
-    background-color: rgb(42, 1, 13);
+    background-color: #280008;
     color: wheat;
 }
 .color2{
     background-color: wheat;
-    color: rgb(42, 1, 13);
+    color: #280008;
 }
 
 a{
@@ -44,12 +44,6 @@ div{
     position: relative;
 }
 
-#home{
-    position: fixed;
-    width: auto;
-    padding: auto;
-}
-
 header{
     position: fixed;
     padding: 0.3em;
@@ -72,10 +66,11 @@ img{
     font-size: 1em;
     text-decoration: none;
     font-weight: bold;
+    transition: 250ms;
 }
 .sections:hover{
     font-size: 1.1em;
-    text-decoration: underline burlywood;
+    text-decoration: underline wheat;
     text-underline-offset: 0.5rem;
 }
 
@@ -87,7 +82,7 @@ img{
     background-repeat: no-repeat;
     background-position: bottom left;
     background-attachment: fixed;
-    background-size: 80% auto;
+    background-size: 75% auto;
 }
 #textHero{
     position: absolute;
@@ -97,7 +92,7 @@ img{
 }
 
 #title, #msg{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 #siono{
@@ -114,8 +109,6 @@ img{
     position: absolute;
     margin: 2em;
     top: 20%;
-    left: 5%;
-    right:10%;
 }
 
 #manodedios{
@@ -132,8 +125,6 @@ img{
     position: absolute;
     margin: 2em;
     top: 20%;
-    right: 5%;
-    left:10%;
 }
 
 #ilumina{
@@ -150,8 +141,6 @@ img{
     position: absolute;
     margin: 2em;
     top: 20%;
-    left: 5%;
-    right:10%;
 }
 
 .container{
@@ -165,70 +154,166 @@ img{
     scroll-snap-align: end;
 }
 
+/*Button
+==============================================================================*/
+.btn1{
+    --color: wheat;
+    --hover: #d7fff7;
+    --txt: wheat;
+}
+.btn2{
+    --color: #280008;
+    --hover: #7c0018;
+    --txt: #280008;
+}
+button {
+    color: var(--color);
+    transition: 250ms;
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: var(--txt);
+    }
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  color: var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+
 /* RESPONSIVE
    ========================================================================= /*/
- 
-/* Móviles en horizontal o tablets en vertical
-   ------------------------------------------------------------------------- /*/
-@media (min-width: 768px) { 
+@media (min-width: 640px) { 
     #hero{
-        background-size: 60% auto;
+        background-size: 55% auto;
     }
     #siono{
-        background-size: 70% auto;
+        background-size: 75% auto;
     }
     #manodedios{
-        background-size: 60% auto;
+        background-size: 55% auto;
     }
     #ilumina{
-        background-size: 40% auto;
+        background-size: 50% auto;
     }
     #hero p{
         right: 5%;
         bottom: 75%;
     }
     #title, #msg{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
     #textHero{
         right: 10%;
     }
+    #contSiono, #contIlumina{
+        right: 15%;
+    }
+    #contManodedios{
+        left: 15%;
+    }
 }
- 
-/* Tablets en horizonal y escritorios normales
-   ------------------------------------------------------------------------- /*/
-@media (min-width: 1024px) { 
+
+@media (min-width: 768px) { 
     #hero{
         background-size: 50% auto;
+    }
+    #siono{
+        background-size: 70% auto;
+    }
+    #manodedios{
+        background-size: 50% auto;
+    }
+    #ilumina{
+        background-size: 45% auto;
+    }
+    #hero p{
+        right: 5%;
+        bottom: 75%;
+    }
+    #title, #msg{
+        font-size: 1.4em;
+    }
+    #textHero{
+        right: 10%;
+    }
+    #contSiono, #contIlumina{
+        right: 20%;
+    }
+    #contManodedios{
+        left: 20%;
+    }
+}
+ 
+@media (min-width: 1024px) { 
+    #hero{
+        background-size: 40% auto;
     }
     #siono{
         background-size: 60% auto;
     }
     #manodedios{
-        background-size: 50% auto;
-    }
-    #ilumina{
         background-size: 40% auto;
     }
+    #ilumina{
+        background-size: 35% auto;
+    }
     #title, #msg{
-        font-size: 1.4em;
+        font-size: 1.5em;
+    }
+    #contSiono, #contIlumina{
+        right: 30%;
+    }
+    #contManodedios{
+        left: 30%;
     }
 }
  
-/* Escritorios muy anchos
-   ------------------------------------------------------------------------- */
-@media (min-width: 1200px) { 
+@media (min-width: 1280px) { 
     #hero{
-        background-size: 40% auto;
+        background-size: 35% auto;
     }
     #siono{
         background-size: 50% auto;
     }
     #manodedios{
-        background-size: 40% auto;
+        background-size: 35% auto;
     }
     #ilumina{
         background-size: 30% auto;
+    }
+    #title, #msg{
+        font-size: 1.5em;
+    }
+    #contSiono, #contIlumina{
+        right: 35%;
+    }
+    #contManodedios{
+        left: 35%;
+    }
+}
+ 
+@media (min-width: 1536px) { 
+    #hero{
+        background-size: 30% auto;
+    }
+    #siono{
+        background-size: 40% auto;
+    }
+    #manodedios{
+        background-size: 30% auto;
+    }
+    #ilumina{
+        background-size: 25% auto;
     }
     #hero p{
         right: 5%;
@@ -241,7 +326,10 @@ img{
         left: 30%;
         right: 5%;
     }
-    #contSiono{
-        
+    #contSiono, #contIlumina{
+        right: 40%;
+    }
+    #contManodedios{
+        left: 40%;
     }
 }
