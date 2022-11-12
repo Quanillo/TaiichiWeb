@@ -20,11 +20,11 @@ function sionoResponse (question){
   }
   else if(n%2==0){
     document.getElementById('msg').innerHTML = question + '<br> SI.';
-    document.location.href = "#hero";
+    document.location = "#hero";
   }
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
-    document.location.href = "#hero";
+    document.location = "#hero";
   }
 }
 
@@ -53,7 +53,7 @@ function manodediosChoice (){
 
   document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   manodediosOptions = [];
-  document.location.href = "#hero";
+  document.location = "#hero";
 }
 
 //================  ILUMINA  ==========================
@@ -77,7 +77,7 @@ function iluminaResponse (question){
   }
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
-    document.location.href = "#hero";
+    document.location = "#hero";
   }
 }
 
