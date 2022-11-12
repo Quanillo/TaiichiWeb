@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitSiono(e) {
     e.preventDefault();
-    hideKeyboard();
     document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
     e.target.reset();
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitManodedios(e) {
   e.preventDefault();
-  hideKeyboard();
+  document.location = "#hero";
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
@@ -50,7 +49,6 @@ function manodediosResponse (question){
 }
 
 function manodediosChoice (){
-  hideKeyboard();
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
@@ -66,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitIlumina(e) {
   e.preventDefault();
-  hideKeyboard();
   let question = document.getElementById('preguntaIlumina').value;
   e.target.reset();
   iluminaResponse(question);
@@ -92,37 +89,7 @@ const iluminaOptions = [
   'Todos somos contingentes, pero tú eres necesario.',
 ]
 //============= beta================
-function hideKeyboard() {
-  //this set timeout needed for case when hideKeyborad
-  //is called inside of 'onfocus' event handler
-  setTimeout(function() {
 
-    //creating temp field
-    var field = document.createElement('input');
-    field.setAttribute('type', 'text');
-    //hiding temp field from peoples eyes
-    //-webkit-user-modify is nessesary for Android 4.x
-    field.setAttribute('style', 'position:absolute; top: 0px; opacity: 0; -webkit-user-modify: read-write-plaintext-only; left:0px;');
-    document.body.appendChild(field);
-
-    //adding onfocus event handler for out temp field
-    field.onfocus = function(){
-      //this timeout of 200ms is nessasary for Android 2.3.x
-      setTimeout(function() {
-
-        field.setAttribute('style', 'display:none;');
-        setTimeout(function() {
-          document.body.removeChild(field);
-          document.body.focus();
-        }, 14);
-
-      }, 0);
-    };
-    //focusing it
-    field.focus();
-
-  }, 0);
-}
 /*
 let viewport = document.querySelector('meta[name=viewport]')
  viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
