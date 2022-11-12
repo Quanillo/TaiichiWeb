@@ -10,7 +10,6 @@ function submitSiono(e) {
     e.target.reset();
     sionoResponse(question);
     navigator.virtualKeyboard.hide();
-    document.location = "#hero";
   }
 
 function sionoResponse (question){
@@ -27,6 +26,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
+  document.location = "#hero";
 }
 
 //================  MANODEDIOS  ==========================
