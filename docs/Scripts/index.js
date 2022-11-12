@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitSiono(e) {
     e.preventDefault();
+    document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
     e.target.reset();
     sionoResponse(question);
@@ -87,6 +88,7 @@ const iluminaOptions = [
   'Todos somos contingentes, pero tú eres necesario.',
 ]
 //============= beta================
+/*
 let viewport = document.querySelector('meta[name=viewport]')
  viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 
@@ -99,3 +101,4 @@ document.documentElement.style.setProperty('overflow', 'auto')
 metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 
 
+*/
