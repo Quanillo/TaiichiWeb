@@ -6,10 +6,10 @@ let formIlumina = document.getElementById('formIlumina');
 
 //SIONO
 function submitSiono(e) {
-    let question = document.getElementById('preguntaSiono').value;
-    sionoResponse(question);
-    window.location = "#hero";
     e.preventDefault();
+    let question = document.getElementById('preguntaSiono').value;
+    e.target.reset();
+    sionoResponse(question);
   }
 formSiono.addEventListener("submit", submitSiono);
 
@@ -21,41 +21,43 @@ function sionoResponse (question){
   }
   else if(n%2==0){
     msg.innerHTML = question + '<br> SI.';
+    window.location = "#hero";
   }
   else{
     msg.innerHTML = question + '<br> NO.';
+    window.location = "#hero";
   }
 }
 
 //MANODEDIOS
 function submitManodedios(e) {
-  let question = document.getElementById('preguntaManodedios').value;
-  manodediosResponse(question);
   e.preventDefault();
+  let question = document.getElementById('preguntaManodedios').value;
+  e.target.reset();
+  manodediosResponse(question);
 }
 formManodedios.addEventListener("submit", submitManodedios);
 
-const manodediosOptions = [];
+let manodediosOptions = [];
 
 function manodediosResponse (question){
   title.remove();
-  formManodedios.value = "";
-  document.getElementById('preguntaManodedios').value = "";
   manodediosOptions.push(question);
 }
 
 function manodediosChoice (){
-  let n = Math.round(Math.random() * (manodediosOptions.length - 0) + 0);
-  msg.innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[n];
+  console.log(manodediosOptions);
+  msg.innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
+  manodediosOptions = [];
   window.location = "#hero";
 }
 
 //ILUMINA
 function submitIlumina(e) {
-  let question = document.getElementById('preguntaIlumina').value;
-  iluminaResponse(question);
-  window.location = "#hero";
   e.preventDefault();
+  let question = document.getElementById('preguntaIlumina').value;
+  e.target.reset();
+  iluminaResponse(question);
 }
 formIlumina.addEventListener("submit", submitIlumina);
 
@@ -65,8 +67,8 @@ function iluminaResponse (question){
     msg.innerHTML = 'Mucho texto. Sintentiza.';
   }
   else{
-    let n = Math.round(Math.random() * (iluminaOptions.length - 1) + 1);
-    msg.innerHTML = question + '<br>' + iluminaOptions[n];
+    msg.innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
+    window.location = "#hero";
   }
 }
 
