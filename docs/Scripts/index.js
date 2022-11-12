@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitSiono(e) {
     e.preventDefault();
+    navigator.virtualKeyboard.hide();
     document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
     e.target.reset();
     sionoResponse(question);
-    navigator.virtualKeyboard.hide();
   }
 
 function sionoResponse (question){
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitManodedios(e) {
   e.preventDefault();
+  navigator.virtualKeyboard.hide();
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
@@ -49,6 +50,7 @@ function manodediosResponse (question){
 }
 
 function manodediosChoice (){
+  navigator.virtualKeyboard.hide();
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitIlumina(e) {
   e.preventDefault();
+  navigator.virtualKeyboard.hide();
   let question = document.getElementById('preguntaIlumina').value;
   e.target.reset();
   iluminaResponse(question);
