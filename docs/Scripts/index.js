@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitManodedios(e) {
   e.preventDefault();
-  document.location = "#hero";
+  document.location = "#manodedios";
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
