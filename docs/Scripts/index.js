@@ -9,6 +9,7 @@ function submitSiono(e) {
     let question = document.getElementById("preguntaSiono").value;
     e.target.reset();
     sionoResponse(question);
+    navigator.virtualKeyboard.hide();
     document.location = "#hero";
   }
 
@@ -88,6 +89,7 @@ const iluminaOptions = [
   'Todos somos contingentes, pero tú eres necesario.',
 ]
 //============= beta================
+
 /*
 let viewport = document.querySelector('meta[name=viewport]')
  viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
