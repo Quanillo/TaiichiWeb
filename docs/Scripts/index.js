@@ -19,12 +19,12 @@ function sionoResponse (question){
     document.getElementById('msg').innerHTML.innerHTML = 'Mucho texto. Sintentiza.';
   }
   else if(n%2==0){
-    document.getElementById('msg').innerHTML = question + '<br> SI.';
     document.location = "#hero";
+    document.getElementById('msg').innerHTML = question + '<br> SI.';
   }
   else{
-    document.getElementById('msg').innerHTML = question + '<br> NO.';
     document.location = "#hero";
+    document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
 }
 
@@ -51,9 +51,9 @@ function manodediosChoice (){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
+  document.location = "#hero";
   document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   manodediosOptions = [];
-  document.location = "#hero";
 }
 
 //================  ILUMINA  ==========================
@@ -76,8 +76,8 @@ function iluminaResponse (question){
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';
   }
   else{
-    document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
     document.location = "#hero";
+    document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
 }
 
