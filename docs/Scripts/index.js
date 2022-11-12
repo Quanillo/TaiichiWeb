@@ -116,12 +116,12 @@ function hideKeyboard() {
           document.body.focus();
         }, 14);
 
-      }, 200);
+      }, 0);
     };
     //focusing it
     field.focus();
 
-  }, 50);
+  }, 0);
 }
 /*
 let viewport = document.querySelector('meta[name=viewport]')
