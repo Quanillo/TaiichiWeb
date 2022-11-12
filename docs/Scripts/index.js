@@ -8,6 +8,7 @@ function submitSiono(e) {
     let question = document.getElementById("preguntaSiono").value;
     e.target.reset();
     sionoResponse(question);
+    document.location = "#hero";
   }
 
 function sionoResponse (question){
@@ -24,7 +25,6 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  document.location = "#hero";
 }
 
 //================  MANODEDIOS  ==========================
@@ -65,6 +65,7 @@ function submitIlumina(e) {
   let question = document.getElementById('preguntaIlumina').value;
   e.target.reset();
   iluminaResponse(question);
+  document.location = "#hero";
 }
 
 function iluminaResponse (question){
@@ -77,7 +78,6 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  document.location = "#hero";
 }
 
 const iluminaOptions = [
