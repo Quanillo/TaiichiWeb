@@ -86,6 +86,13 @@ const iluminaOptions = [
   'Estoy ocupado peinando a mi tortuga.',
   'Todos somos contingentes, pero tú eres necesario.',
 ]
+//============= beta================
+document.documentElement.style.setProperty('overflow', 'auto')
+ const metaViewport = document.querySelector('meta[name=viewport]')
+ metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0')
 
+
+ const metaViewport2 = document.querySelector('meta[name=viewport]')
+metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 
 
