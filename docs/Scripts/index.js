@@ -73,6 +73,7 @@ function iluminaResponse (question){
     document.getElementById('title').remove();
 
   if(question.length>400){
+    document.location = "#hero";
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';
   }
   else{
