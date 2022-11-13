@@ -23,6 +23,9 @@ function sionoResponse (question){
   if(question.length>400){
     document.getElementById('msg').innerHTML.innerHTML = 'Mucho texto. Sintentiza.';
   }
+  else if(question == ''){
+    document.getElementById('msg').innerHTML = 'Taiichi no puede responder sin pregunta.'
+  }
   else if(n%2==0){
     document.getElementById('msg').innerHTML = question + '<br> SI.';
   }
@@ -33,7 +36,7 @@ function sionoResponse (question){
 }
 
 //================  MANODEDIOS  ==========================
-let manodediosOptions = [];
+let manodediosOptions = null;
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('formManodedios').addEventListener('submit', submitManodedios); 
@@ -56,8 +59,14 @@ function manodediosChoice (){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
-  document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
-  manodediosOptions = [];
+  console.log(manodediosOptions);  
+
+  if(manodediosOptions === null)
+    document.getElementById('msg').innerHTML = 'Taiichi no puede decidir entre 0 opciones.'
+  else
+    document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
+  
+    manodediosOptions = [];
   goToPageDelay('hero', 100);
 }
 
@@ -81,6 +90,9 @@ function iluminaResponse (question){
 
   if(question.length>400){
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';
+  }
+  else if(question == ''){
+    document.getElementById('msg').innerHTML = 'Nada.<br>Solo sé que no sé nada.'
   }
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
