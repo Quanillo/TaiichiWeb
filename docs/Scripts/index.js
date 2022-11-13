@@ -1,7 +1,3 @@
-function hideKeyboard(){
-	document.activeElement.blur();
-	$("input").blur();
-};
 //================  SIONO  ==========================
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('formSiono').addEventListener('submit', submitSiono); 
@@ -12,6 +8,7 @@ function submitSiono(e) {
     document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
     //e.target.reset();
+    document.getElementById("preguntaSiono").blur();
     hideKeyboard();
     sionoResponse(question);
   }
