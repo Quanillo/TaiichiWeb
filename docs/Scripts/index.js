@@ -24,7 +24,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  location.replace("#hero");
+  document.location = "#hero";
 }
 
 //================  MANODEDIOS  ==========================
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitManodedios(e) {
   e.preventDefault();
-  document.location = "#manodedios";
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
@@ -55,6 +54,8 @@ function manodediosChoice (){
   manodediosOptions = [];
   document.location = "#hero";
 }
+
+
 
 //================  ILUMINA  ==========================
 document.addEventListener("DOMContentLoaded", function() {
@@ -78,7 +79,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  location.replace("#hero");
+  document.location = "#hero";
 }
 
 const iluminaOptions = [
