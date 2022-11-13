@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 function submitSiono(e) {
     e.preventDefault();
     let question = document.getElementById("preguntaSiono").value;
-    //e.target.reset();
-    document.activeElement.blur();
+    e.target.reset();
+    KEYBOARD.hide();
     sionoResponse(question);
   }
 
@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
 function submitIlumina(e) {
   e.preventDefault();
   let question = document.getElementById('preguntaIlumina').value;
-  //e.target.reset();
-  document.activeElement.blur();
+  e.target.reset();
+  KEYBOARD.hide();
   iluminaResponse(question);
 }
 
