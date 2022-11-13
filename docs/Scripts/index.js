@@ -5,11 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function submitSiono(e) {
     e.preventDefault();
-    document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
     //e.target.reset();
     document.getElementById("preguntaSiono").blur();
-    hideKeyboard();
     sionoResponse(question);
   }
 
@@ -67,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
 function submitIlumina(e) {
   e.preventDefault();
   let question = document.getElementById('preguntaIlumina').value;
-  e.target.reset();
+  //e.target.reset();
+  document.getElementById("preguntaSiono").blur();
   iluminaResponse(question);
-  document.location = "#hero";
 }
 
 function iluminaResponse (question){
@@ -82,6 +80,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
+  document.location = "#hero";
 }
 
 const iluminaOptions = [
