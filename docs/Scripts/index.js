@@ -7,7 +7,7 @@ function submitSiono(e) {
     e.preventDefault();
     let question = document.getElementById("preguntaSiono").value;
     //e.target.reset();
-    document.getElementById("preguntaSiono").blur();
+    document.activeElement.blur();
     sionoResponse(question);
   }
 
@@ -66,7 +66,7 @@ function submitIlumina(e) {
   e.preventDefault();
   let question = document.getElementById('preguntaIlumina').value;
   //e.target.reset();
-  document.getElementById("preguntaIlumina").blur();
+  document.activeElement.blur();
   iluminaResponse(question);
 }
 
