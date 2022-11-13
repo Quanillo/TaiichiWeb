@@ -78,6 +78,7 @@ img{
 #hero{
     display: flex;
     height: 100vh;
+    justify: start;
     background-size: 41em 40em ;
     background-image: url("images/TaiichiBossTransparent.png");
     background-repeat: no-repeat;
@@ -99,6 +100,7 @@ img{
 #siono{
     display: flex;
     height: 100vh;
+    justify: start;
     background-image: url("images/TaiichiDiosTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -115,6 +117,7 @@ img{
 #manodedios{
     display: flex;
     height: 100vh;
+    justify: start;
     background-image: url("images/TaiichiComunistaTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -131,6 +134,7 @@ img{
 #ilumina{
     display: flex;
     height: 100vh;
+    justify: start;
     background-image: url("images/TaiichiPaintTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -150,7 +154,6 @@ img{
     width: 100%;
     flex-direction: column;
     align-items: center;
-    justify: start;
     justify-content: center;
     text-align: center;
     scroll-snap-align: end;
