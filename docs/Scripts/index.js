@@ -20,7 +20,7 @@ function sionoResponse (question){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
-  if(question.length>400){
+  if(question.length>200){
     document.getElementById('msg').innerHTML.innerHTML = 'Mucho texto. Sintentiza.';
   }
   else if(question == ''){
@@ -94,7 +94,7 @@ function iluminaResponse (question){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
-  if(question.length>400){
+  if(question.length>200){
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';
   }
   else if(question == ''){
