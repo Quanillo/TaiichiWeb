@@ -20,6 +20,9 @@ function sionoResponse (question){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
+  if(document.getElementById('subtitle') != null)
+    document.getElementById('subtitle').remove();
+
   if(question.length>200){
     document.getElementById('msg').innerHTML.innerHTML = 'Mucho texto. Sintentiza.';
   }
@@ -61,6 +64,9 @@ function manodediosChoice (){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
 
+  if(document.getElementById('subtitle') != null)
+    document.getElementById('subtitle').remove();
+
   console.log(manodediosOptions);  
 
   if(manodediosOptions === []){
@@ -93,6 +99,9 @@ function submitIlumina(e) {
 function iluminaResponse (question){
   if(document.getElementById('title') != null)
     document.getElementById('title').remove();
+
+    if(document.getElementById('subtitle') != null)
+    document.getElementById('subtitle').remove();
 
   if(question.length>200){
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';

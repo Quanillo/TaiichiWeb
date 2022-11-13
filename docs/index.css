@@ -99,13 +99,17 @@ img{
     font-family: 'Ephesis', cursive;
 } 
 
+#subtitle{
+    font-size: 0.9em;
+}
+
 #question{
     font-family: 'Ephesis', cursive;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 #msg{
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 #siono{
@@ -225,8 +229,20 @@ button:hover, button:focus {
         right: 5%;
         bottom: 75%;
     }
-    #title, #msg{
-        font-size: 1.3em;
+    #title{
+        font-size: 2.4em;
+    } 
+    #subtitle{
+        font-size: 1.2em;
+    }
+    #question{
+        font-size: 2em;
+    }
+    #msg{
+        font-size: 1.6em;
+    }
+    question{
+
     }
     #textHero{
         right: 10%;
@@ -256,8 +272,17 @@ button:hover, button:focus {
         right: 5%;
         bottom: 75%;
     }
-    #qestion, #msg{
+    #title{
+        font-size: 2.4em;
+    } 
+    #subtitle{
         font-size: 1.4em;
+    }
+    #question{
+        font-size: 2.2em;
+    }
+    #msg{
+        font-size: 1.8em;
     }
     #textHero{
         right: 10%;
@@ -283,8 +308,17 @@ button:hover, button:focus {
     #ilumina{
         background-size: 35% auto;
     }
-    #question, #msg{
-        font-size: 1.5em;
+    #title{
+        font-size: 2.6em;
+    } 
+    #subtitle{
+        font-size: 1.6em;
+    }
+    #question{
+        font-size: 2.4em;
+    }
+    #msg{
+        font-size: 2em;
     }
     #contSiono, #contIlumina{
         right: 30%;
@@ -307,8 +341,17 @@ button:hover, button:focus {
     #ilumina{
         background-size: 30% auto;
     }
-    #question, #msg{
-        font-size: 1.5em;
+    #title{
+        font-size: 2.8em;
+    } 
+    #subtitle{
+        font-size: 1.8em;
+    }
+    #question{
+        font-size: 2.6em;
+    }
+    #msg{
+        font-size: 2.2em;
     }
     #contSiono, #contIlumina{
         right: 35%;
@@ -335,8 +378,17 @@ button:hover, button:focus {
         right: 5%;
         right: 40%;
     }
-    #question, #msg{
-        font-size: 1.6em;
+    #title{
+        font-size: 3em;
+    } 
+    #subtitle{
+        font-size: 2em;
+    }
+    #question{
+        font-size: 2.8em;
+    }
+    #msg{
+        font-size: 2.4em;
     }
     #textHero{
         left: 30%;
