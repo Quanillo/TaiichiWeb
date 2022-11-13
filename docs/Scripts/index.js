@@ -1,6 +1,6 @@
-function goToHero(){
+function goToPage(page){
   setTimeout(function() {
-    document.location = "#hero";
+    document.location = "#" + page;
   }, 100);
 }
 
@@ -30,7 +30,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  goToHero();
+  goToPage('hero');
 }
 
 //================  MANODEDIOS  ==========================
@@ -62,7 +62,7 @@ function manodediosChoice (){
 
   document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   manodediosOptions = [];
-  goToHero();
+  goToPage('hero');
 }
 
 
@@ -89,7 +89,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  goToHero();
+  goToPage('hero');
 }
 
 const iluminaOptions = [
