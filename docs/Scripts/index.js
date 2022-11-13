@@ -1,3 +1,10 @@
+function goToHero(){
+  setTimeout(function() {
+    document.location = "#hero";
+    console.log('hero')
+  }, 250);
+}
+
 //================  SIONO  ==========================
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('formSiono').addEventListener('submit', submitSiono); 
@@ -24,7 +31,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  document.location = "#hero";
+  goToHero();
 }
 
 //================  MANODEDIOS  ==========================
@@ -52,7 +59,7 @@ function manodediosChoice (){
 
   document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   manodediosOptions = [];
-  document.location = "#hero";
+  goToHero();
 }
 
 
@@ -79,7 +86,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  document.location = "#hero";
+  goToHero();
 }
 
 const iluminaOptions = [
