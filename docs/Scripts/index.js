@@ -66,7 +66,7 @@ function submitIlumina(e) {
   e.preventDefault();
   let question = document.getElementById('preguntaIlumina').value;
   //e.target.reset();
-  document.getElementById("preguntaSiono").blur();
+  document.getElementById("preguntaIlumina").blur();
   iluminaResponse(question);
 }
 
