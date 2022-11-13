@@ -2,7 +2,7 @@ function goToHero(){
   setTimeout(function() {
     document.location = "#hero";
     console.log('hero')
-  }, 250);
+  }, 100);
 }
 
 //================  SIONO  ==========================
@@ -51,6 +51,10 @@ function submitManodedios(e) {
 function manodediosResponse (question){
   if(question !== null && question!=='')
     manodediosOptions.push(question);
+    setTimeout(function() {
+      document.location = "#manodedios";
+      console.log('hero')
+    }, 100);
 }
 
 function manodediosChoice (){
