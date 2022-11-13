@@ -24,7 +24,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  window.location.href = "#hero";
+  location.replace("#hero");
 }
 
 //================  MANODEDIOS  ==========================
@@ -78,7 +78,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  window.location.href = "#hero";
+  location.replace("#hero");
 }
 
 const iluminaOptions = [
