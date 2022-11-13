@@ -1,7 +1,6 @@
 function goToHero(){
   setTimeout(function() {
     document.location = "#hero";
-    console.log('hero')
   }, 100);
 }
 
@@ -46,15 +45,15 @@ function submitManodedios(e) {
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
+  setTimeout(function() {
+    document.location = "#manodedios";
+  }, 50);
+  
 }
 
 function manodediosResponse (question){
   if(question !== null && question!=='')
     manodediosOptions.push(question);
-    setTimeout(function() {
-      document.location = "#manodedios";
-      console.log('hero')
-    }, 100);
 }
 
 function manodediosChoice (){
