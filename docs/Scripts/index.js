@@ -1,7 +1,7 @@
-function goToPage(page){
+function goToPageDelay(page, n){
   setTimeout(function() {
     document.location = "#" + page;
-  }, 100);
+  }, n);
 }
 
 //================  SIONO  ==========================
@@ -30,7 +30,7 @@ function sionoResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br> NO.';
   }
-  goToPage('hero');
+  goToPageDelay('hero', 100);
 }
 
 //================  MANODEDIOS  ==========================
@@ -45,10 +45,7 @@ function submitManodedios(e) {
   let question = document.getElementById('preguntaManodedios').value;
   e.target.reset();
   manodediosResponse(question);
-  setTimeout(function() {
-    document.location = "#manodedios";
-  }, 50);
-  
+  goToPageDelay('manodedios', 50);
 }
 
 function manodediosResponse (question){
@@ -62,7 +59,7 @@ function manodediosChoice (){
 
   document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   manodediosOptions = [];
-  goToPage('hero');
+  goToPageDelay('hero', 100);
 }
 
 
@@ -89,7 +86,7 @@ function iluminaResponse (question){
   else{
     document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
-  goToPage('hero');
+  goToPageDelay('hero', 100);
 }
 
 const iluminaOptions = [

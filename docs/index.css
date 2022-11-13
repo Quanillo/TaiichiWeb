@@ -37,7 +37,7 @@ body{
 }
 
 #main{
-    
+    overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
 
@@ -156,7 +156,7 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    scroll-snap-align: end;
+    scroll-snap-align: start;
 }
 
 /*Button
