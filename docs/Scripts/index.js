@@ -7,7 +7,7 @@ function submitSiono(e) {
     e.preventDefault();
     document.location = "#siono";
     let question = document.getElementById("preguntaSiono").value;
-    e.target.reset();
+    //e.target.reset();
     document.activeElement.blur();
     sionoResponse(question);
   }
