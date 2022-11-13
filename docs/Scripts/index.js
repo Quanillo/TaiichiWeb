@@ -89,7 +89,6 @@ function iluminaResponse (question){
 }
 
 const iluminaOptions = [
-  'Cierra los ojos, y deja que Taiichi guíe tus dedos.',
   'No renuncies a tus sueños, sigue durmiendo.',
   'Estoy ocupado peinando a mi tortuga.',
   'Todos somos contingentes, pero tú eres necesario.',
