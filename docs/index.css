@@ -1,6 +1,7 @@
 /* ESTILOS NORMALES (para móviles en vertical)
    ========================================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 .color1{
     background-color: #280008;
     color: wheat;
@@ -93,7 +94,17 @@ img{
     top: 15%;
 }
 
-#title, #msg{
+#title{
+    font-size: 2em;
+    font-family: 'Ephesis', cursive;
+} 
+
+#question{
+    font-family: 'Ephesis', cursive;
+    font-size: 2em;
+}
+
+#msg{
     font-size: 1.2em;
 }
 
@@ -245,7 +256,7 @@ button:hover, button:focus {
         right: 5%;
         bottom: 75%;
     }
-    #title, #msg{
+    #qestion, #msg{
         font-size: 1.4em;
     }
     #textHero{
@@ -272,7 +283,7 @@ button:hover, button:focus {
     #ilumina{
         background-size: 35% auto;
     }
-    #title, #msg{
+    #question, #msg{
         font-size: 1.5em;
     }
     #contSiono, #contIlumina{
@@ -296,7 +307,7 @@ button:hover, button:focus {
     #ilumina{
         background-size: 30% auto;
     }
-    #title, #msg{
+    #question, #msg{
         font-size: 1.5em;
     }
     #contSiono, #contIlumina{
@@ -324,7 +335,7 @@ button:hover, button:focus {
         right: 5%;
         right: 40%;
     }
-    #title, #msg{
+    #question, #msg{
         font-size: 1.6em;
     }
     #textHero{

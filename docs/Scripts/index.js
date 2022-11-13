@@ -27,16 +27,18 @@ function sionoResponse (question){
     document.getElementById('msg').innerHTML = 'Taiichi no puede responder sin pregunta.'
   }
   else if(n%2==0){
-    document.getElementById('msg').innerHTML = question + '<br> SI.';
+    document.getElementById('question').innerHTML = question;
+    document.getElementById('msg').innerHTML = /*question +*/ '<br> SI.';
   }
   else{
-    document.getElementById('msg').innerHTML = question + '<br> NO.';
+    document.getElementById('question').innerHTML = question;
+    document.getElementById('msg').innerHTML = /*question +*/ '<br> NO.';
   }
   goToPageDelay('hero', 100);
 }
 
 //================  MANODEDIOS  ==========================
-let manodediosOptions = null;
+let manodediosOptions = [];
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('formManodedios').addEventListener('submit', submitManodedios); 
@@ -61,10 +63,14 @@ function manodediosChoice (){
 
   console.log(manodediosOptions);  
 
-  if(manodediosOptions === null)
+  if(manodediosOptions === []){
     document.getElementById('msg').innerHTML = 'Taiichi no puede decidir entre 0 opciones.'
-  else
-    document.getElementById('msg').innerHTML = 'Taiichi decide: ' + '<br>' + manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
+  }
+  else{
+    document.getElementById('question').innerHTML = 'Taiichi decide:';
+    document.getElementById('msg').innerHTML = manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
+  }
+    
   
     manodediosOptions = [];
   goToPageDelay('hero', 100);
@@ -92,10 +98,12 @@ function iluminaResponse (question){
     document.getElementById('msg').innerHTML = 'Mucho texto. Sintentiza.';
   }
   else if(question == ''){
-    document.getElementById('msg').innerHTML = 'Nada.<br>Solo sé que no sé nada.'
+    document.getElementById('question').innerHTML = 'Nada.';
+    document.getElementById('msg').innerHTML = 'Solo sé que no sé nada.'
   }
   else{
-    document.getElementById('msg').innerHTML = question + '<br>' + iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
+    document.getElementById('question').innerHTML = question;
+    document.getElementById('msg').innerHTML = iluminaOptions[Math.floor(Math.random() * iluminaOptions.length)];
   }
   goToPageDelay('hero', 100);
 }
