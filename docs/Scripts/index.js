@@ -69,10 +69,11 @@ function manodediosChoice (){
 
   console.log(manodediosOptions);  
 
-  if(manodediosOptions === []){
+  if(manodediosOptions.length == 0){
     document.getElementById('msg').innerHTML = 'Taiichi no puede decidir entre 0 opciones.'
   }
   else{
+    console.log(manodediosOptions);
     document.getElementById('question').innerHTML = 'Taiichi decide:';
     document.getElementById('msg').innerHTML = manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
   }
