@@ -2,6 +2,22 @@
    ========================================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@font-face {
+    font-family: 'Moyko';
+    src: url('fonts/Moyko.ttf')
+}
+@font-face {
+    font-family: 'fontshui';
+    src: url('fonts/fontshui.ttf')
+}
+@font-face {
+    font-family: 'Yakuza';
+    src: url('fonts/Yakuza.ttf')
+}
+@font-face {
+    font-family: 'Masmuseh';
+    src: url('fonts/Masmuseh.otf')
+}
 .color1{
     background-color: #280008;
     color: wheat;
@@ -34,7 +50,7 @@ body{
     //position: relative;
     height: 100;
     width: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Masmuseh', normal;
 }
 
 #main{
@@ -65,7 +81,7 @@ img{
 }
 .sections{
     padding-top: 1em;
-    font-size: 1em;
+    font-size: 2em;
     text-decoration: none;
     font-weight: bold;
     transition: 250ms;
@@ -96,7 +112,7 @@ img{
 
 #title{
     font-size: 2em;
-    font-family: 'Ephesis', cursive;
+    font-family: 'Masmuseh', normal;
 } 
 
 #subtitle{
@@ -104,7 +120,7 @@ img{
 }
 
 #question{
-    font-family: 'Ephesis', cursive;
+    font-family: 'Masmuseh', normal;
     font-size: 1.8em;
 }
 
@@ -132,12 +148,7 @@ img{
 #manodedios{
     display: flex;
     height: 100vh;
-    justify: start;
-    background-image: url("images/TaiichiComunistaTransparent.png");
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    background-attachment: fixed;
-    background-size: 70% auto;
+    justify: start;70px0% auto;
 }
 
 #contManodedios{
@@ -240,9 +251,6 @@ button:hover, button:focus {
     }
     #msg{
         font-size: 1.6em;
-    }
-    question{
-
     }
     #textHero{
         right: 10%;
@@ -379,7 +387,7 @@ button:hover, button:focus {
         right: 40%;
     }
     #title{
-        font-size: 3em;
+        font-size: 4em;
     } 
     #subtitle{
         font-size: 2em;
