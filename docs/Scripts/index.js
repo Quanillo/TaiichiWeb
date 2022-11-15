@@ -124,7 +124,7 @@ const iluminaOptions = [
   'Todos somos contingentes, pero tú eres necesario.',
   'Todos deberíamos creer en algo... yo, por ejemplo, creo que tomaré otra copa.',
   'La gente no sabe lo que tiene hasta que recoge su cuarto.',
-  '10 millones de moscas no se equivocan, ¡¡coma MIERDA!!',
+  '10 millones de moscas no se equivocan, coma MIERDA!',
   'La ignorancia es temporal, la estupidez es para siempre.',
   'Me gustan los largos paseos, especialmente cuando los toma gente molesta.',
   'La edad es algo que no importa, a menos que sea usted un queso.',
