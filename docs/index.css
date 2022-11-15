@@ -81,7 +81,7 @@ img{
 }
 .sections{
     padding-top: 1em;
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-decoration: none;
     font-weight: bold;
     transition: 250ms;
@@ -272,6 +272,9 @@ button:hover, button:focus {
     #contManodedios{
         left: 25%;
     }
+    .sections{
+        font-size: 1.6em;
+    }
 }
 
 @media (min-width: 768px) { 
@@ -316,6 +319,9 @@ button:hover, button:focus {
     #contManodedios{
         left: 35%;
     }
+    .sections{
+        font-size: 1.8em;
+    }
 }
  
 @media (min-width: 1024px) { 
@@ -353,6 +359,9 @@ button:hover, button:focus {
     #contManodedios{
         left: 40%;
     }
+    .sections{
+        font-size: 1.9em;
+    }
 }
  
 @media (min-width: 1280px) { 
@@ -389,6 +398,9 @@ button:hover, button:focus {
     }
     #contManodedios{
         left: 45%;
+    }
+    .sections{
+        font-size: 1.2em;
     }
 }
  
@@ -430,5 +442,8 @@ button:hover, button:focus {
     }
     #contManodedios{
         left: 45%;
+    }
+    .sections{
+        font-size: 2.1em;
     }
 }
