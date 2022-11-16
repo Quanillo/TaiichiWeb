@@ -56,8 +56,10 @@ function submitManodedios(e) {
 }
 
 function manodediosResponse (question){
-  if(question !== null && question!=='')
+  if(question !== null && question!==''){
     manodediosOptions.push(question);
+    document.getElementById('motrarOpciones').innerHTML = manodediosOptions.map(x=>x= ' ' + x);
+  }
 }
 
 function manodediosChoice (){
@@ -70,12 +72,14 @@ function manodediosChoice (){
   console.log(manodediosOptions);  
 
   if(manodediosOptions.length == 0){
-    document.getElementById('msg').innerHTML = 'Taiichi no puede decidir entre 0 opciones.'
+    document.getElementById('msg').innerHTML = 'Taiichi no puede decidir entre 0 opciones.';
+    document.getElementById('motrarOpciones').innerHTML = '';
   }
   else{
     console.log(manodediosOptions);
-    document.getElementById('question').innerHTML = 'Taiichi decide:';
+    document.getElementById('question').innerHTML = 'Taiichi decide.';
     document.getElementById('msg').innerHTML = manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
+    document.getElementById('motrarOpciones').innerHTML = '';
   }
     
   
@@ -124,7 +128,6 @@ const iluminaOptions = [
   'Todos somos contingentes, pero tú eres necesario.',
   'Todos deberíamos creer en algo... yo, por ejemplo, creo que tomaré otra copa.',
   'La gente no sabe lo que tiene hasta que recoge su cuarto.',
-  '10 millones de moscas no se equivocan, coma MIERDA!',
   'La ignorancia es temporal, la estupidez es para siempre.',
   'Me gustan los largos paseos, especialmente cuando los toma gente molesta.',
   'La edad es algo que no importa, a menos que sea usted un queso.',

@@ -47,15 +47,15 @@ html{
 }
 
 body{
-    //position: relative;
+    /*position: relative;*/
     height: 100;
     width: 100%;
     font-family: 'Masmuseh', normal;
 }
 
 #main{
-    //overflow-y: scroll;
-    //scroll-snap-type: y mandatory;
+    /*overflow-y: scroll;
+    scroll-snap-type: y mandatory;*/
 }
 
 div{
@@ -80,14 +80,15 @@ img{
     width: 3.7em;
 }
 .sections{
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     font-size: 1.4em;
     text-decoration: none;
     font-weight: bold;
     transition: 250ms;
 }
 .sections:hover{
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: underline wheat;
     text-underline-offset: 0.5rem;
 }
@@ -142,7 +143,7 @@ img{
 #contSiono{
     position: absolute;
     margin: 2em;
-    top: 20%;
+    top: 12.5%;
 }
 
 #manodedios{
@@ -159,7 +160,7 @@ img{
 #contManodedios{
     position: absolute;
     margin: 2em;
-    top: 20%;
+    top: 12.5%;
 }
 
 #ilumina{
@@ -176,13 +177,13 @@ img{
 #contIlumina{
     position: absolute;
     margin: 2em;
-    top: 20%;
+    top: 12.5%;
 }
 .textCont p{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .textCont h1{
-    font-size: 3em;
+    font-size: 2em;
 }
 .container{
     display: flex;
@@ -192,7 +193,7 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    //scroll-snap-align: end;
+    /*scroll-snap-align: end;*/
 }
 
 /*Button
@@ -266,7 +267,10 @@ button:hover, button:focus {
     #textHero{
         right: 10%;
     }
-    #contSiono, #contIlumina{
+    #contSiono{
+        right: 22%;
+    }
+    #contIlumina{
         right: 15%;
     }
     #contManodedios{
@@ -274,6 +278,15 @@ button:hover, button:focus {
     }
     .sections{
         font-size: 1.6em;
+    }
+    .sections:hover{
+        font-size: 1.4em;
+    }
+    .textCont p{
+        font-size: 1.7em;
+    }
+    .textCont h1{
+        font-size: 2.2em;
     }
 }
 
@@ -313,7 +326,10 @@ button:hover, button:focus {
         left: 20%;
         right: 10%;
     }
-    #contSiono, #contIlumina{
+    #contSiono{
+        right: 28%;
+    }
+    #contIlumina{
         right: 20%;
     }
     #contManodedios{
@@ -321,6 +337,15 @@ button:hover, button:focus {
     }
     .sections{
         font-size: 1.8em;
+    }
+    .sections:hover{
+        font-size: 1.6em;
+    }
+    .textCont p{
+        font-size: 1.9em;
+    }
+    .textCont h1{
+        font-size: 2.4em;
     }
 }
  
@@ -353,7 +378,10 @@ button:hover, button:focus {
         left: 20%;
         right: 10%;
     }
-    #contSiono, #contIlumina{
+    #contSiono{
+        right: 38%;
+    }
+    #contIlumina{
         right: 30%;
     }
     #contManodedios{
@@ -362,6 +390,16 @@ button:hover, button:focus {
     .sections{
         font-size: 1.9em;
     }
+    .sections:hover{
+        font-size: 1.7em;
+    }
+    .textCont p{
+        font-size: 2.1em;
+    }
+    .textCont h1{
+        font-size: 2.6em;
+    }
+    
 }
  
 @media (min-width: 1280px) { 
@@ -393,14 +431,26 @@ button:hover, button:focus {
         left: 25%;
         right: 10%;
     }
-    #contSiono, #contIlumina{
+    #contSiono{
+        right: 42%;
+    }
+    #contIlumina{
         right: 35%;
     }
     #contManodedios{
         left: 45%;
     }
     .sections{
-        font-size: 1.2em;
+        font-size: 2em;
+    }
+    .sections:hover{
+        font-size: 1.8em;
+    }
+    .textCont p{
+        font-size: 2.3em;
+    }
+    .textCont h1{
+        font-size: 2.8em;
     }
 }
  
@@ -437,7 +487,10 @@ button:hover, button:focus {
         left: 30%;
         right: 5%;
     }
-    #contSiono, #contIlumina{
+    #contSiono{
+        right: 45%;
+    }
+    #contIlumina{
         right: 40%;
     }
     #contManodedios{
@@ -445,5 +498,15 @@ button:hover, button:focus {
     }
     .sections{
         font-size: 2.1em;
+    }
+    .sections:hover{
+        font-size: 1.9em;
+    }
+    
+    .textCont p{
+        font-size: 2.4em;
+    }
+    .textCont h1{
+        font-size: 3em;
     }
 }
