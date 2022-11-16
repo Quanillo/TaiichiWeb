@@ -77,7 +77,7 @@ function manodediosChoice (){
   }
   else{
     console.log(manodediosOptions);
-    document.getElementById('question').innerHTML = 'Taiichi decide.';
+    document.getElementById('question').innerHTML = 'Taiichi decide . . .';
     document.getElementById('msg').innerHTML = manodediosOptions[Math.floor(Math.random() * manodediosOptions.length)];
     document.getElementById('motrarOpciones').innerHTML = '';
   }
@@ -126,11 +126,8 @@ const iluminaOptions = [
   'No renuncies a tus sueños, sigue durmiendo.',
   'Estoy ocupado peinando a mi tortuga.',
   'Todos somos contingentes, pero tú eres necesario.',
-  'Todos deberíamos creer en algo... yo, por ejemplo, creo que tomaré otra copa.',
-  'La gente no sabe lo que tiene hasta que recoge su cuarto.',
   'La ignorancia es temporal, la estupidez es para siempre.',
   'Me gustan los largos paseos, especialmente cuando los toma gente molesta.',
-  'La edad es algo que no importa, a menos que sea usted un queso.',
   'Un día sin sol es, ya sabes, de noche...',
   'Si no puedes convencerlos, confúndelos.',
   'Hay que fabricar máquinas que nos permitan seguir fabricando máquinas, porque lo que no va a hacer nunca la máquina es fabricar máquinas.',
