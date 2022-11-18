@@ -2,84 +2,92 @@
    ========================================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
 @font-face {
     font-family: 'Moyko';
     src: url('fonts/Moyko.ttf')
 }
+
 @font-face {
     font-family: 'fontshui';
     src: url('fonts/fontshui.ttf')
 }
+
 @font-face {
     font-family: 'Yakuza';
     src: url('fonts/Yakuza.ttf')
 }
+
 @font-face {
     font-family: 'Masmuseh';
     src: url('fonts/Masmuseh.otf')
 }
-.color1{
+
+.color1 {
     background-color: #280008;
     color: wheat;
 }
-.color2{
+
+.color2 {
     background-color: wheat;
     color: #280008;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
+
 .example::-webkit-scrollbar {
     display: none;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-html{
+html {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 }
 
-body{
+body {
     /*position: relative;*/
     height: 100;
     width: 100%;
     font-family: 'Masmuseh', normal;
 }
 
-#main{
-    /*overflow-y: scroll;
-    scroll-snap-type: y mandatory;*/
+#main {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
-div{
+div {
     position: relative;
 }
 
-header{
+header {
     position: fixed;
     padding: 0.3em;
     display: grid;
     justify-content: space-evenly;
     gap: 4px;
     grid-auto-flow: column;
-    left:0;
-    right:0;
-    top:0;
-    z-index:3;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
 }
 
-img{
+img {
     height: 3.3em;
     width: 3.7em;
 }
-.sections{
+
+.sections {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     font-size: 1.4em;
@@ -87,52 +95,52 @@ img{
     font-weight: bold;
     transition: 250ms;
 }
-.sections:hover{
+
+.sections:hover {
     font-size: 1.2em;
-    text-decoration: underline wheat;
+    text-decoration: underline #00c4c4;
     text-underline-offset: 0.5rem;
 }
 
-#hero{
+#hero {
     display: flex;
     height: 100vh;
-    justify: start;
-    background-size: 41em 40em ;
+    background-size: 41em 40em;
     background-image: url("images/TaiichiBossTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom left;
     background-attachment: fixed;
     background-size: 75% auto;
 }
-#textHero{
+
+#textHero {
     position: absolute;
     left: 10%;
     right: 10%;
     top: 12.5%;
 }
 
-#title{
+#title {
     font-size: 2.5em;
     font-family: 'Masmuseh', normal;
-} 
+}
 
-#subtitle{
+#subtitle {
     font-size: 1.5em;
 }
 
-#question{
+#question {
     font-family: 'Masmuseh', normal;
     font-size: 2em;
 }
 
-#msg{
+#msg {
     font-size: 1.8em;
 }
 
-#siono{
+#siono {
     display: flex;
     height: 100vh;
-    justify: start;
     background-image: url("images/TaiichiDiosTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -140,16 +148,15 @@ img{
     background-size: 90% auto;
 }
 
-#contSiono{
+#contSiono {
     position: absolute;
     margin: 2em;
     top: 12.5%;
 }
 
-#manodedios{
+#manodedios {
     display: flex;
     height: 100vh;
-    justify: start;
     background-image: url("images/TaiichiComunistaTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom left;
@@ -157,16 +164,15 @@ img{
     background-size: 70% auto;
 }
 
-#contManodedios{
+#contManodedios {
     position: absolute;
     margin: 2em;
     top: 12.5%;
 }
 
-#ilumina{
+#ilumina {
     display: flex;
     height: 100vh;
-    justify: start;
     background-image: url("images/TaiichiPaintTransparent.png");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -174,18 +180,21 @@ img{
     background-size: 60% auto;
 }
 
-#contIlumina{
+#contIlumina {
     position: absolute;
     margin: 2em;
     top: 12.5%;
 }
-.textCont p{
+
+.textCont p {
     font-size: 1.5em;
 }
-.textCont h1{
+
+.textCont h1 {
     font-size: 2em;
 }
-.container{
+
+.container {
     display: flex;
     height: 100%;
     width: 100%;
@@ -193,21 +202,23 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    /*scroll-snap-align: end;*/
+    scroll-snap-align: start;
 }
 
 /*Button
 ==============================================================================*/
-.btn1{
+.btn1 {
     --color: wheat;
     --hover: #80ffff;
     --txt: wheat;
 }
-.btn2{
+
+.btn2 {
     --color: #280008;
     --hover: #00c4c4;
     --txt: #280008;
 }
+
 button {
     color: var(--color);
     transition: 250ms;
@@ -220,293 +231,373 @@ button {
     padding: 0.6em 0.8em;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
     border-color: var(--hover);
     color: var(--txt);
-    }
+}
+
 .raise:hover,
 .raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  color: var(--hover);
-  -webkit-transform: translateY(-0.25em);
-          transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    color: var(--hover);
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
 }
 
 
 /* RESPONSIVE
    ========================================================================= /*/
-@media (min-width: 640px) { 
-    #hero{
+@media (min-width: 640px) {
+    #hero {
         background-size: 55% auto;
     }
-    #siono{
+
+    #siono {
         background-size: 75% auto;
     }
-    #manodedios{
+
+    #manodedios {
         background-size: 55% auto;
     }
-    #ilumina{
+
+    #ilumina {
         background-size: 50% auto;
     }
-    #hero p{
+
+    #hero p {
         right: 5%;
         bottom: 75%;
     }
-    #title{
+
+    #title {
         font-size: 2.7em;
-    } 
-    #subtitle{
+    }
+
+    #subtitle {
         font-size: 1.6em;
     }
-    #question{
+
+    #question {
         font-size: 2.2em;
     }
-    #msg{
+
+    #msg {
         font-size: 2em;
     }
-    #textHero{
+
+    #textHero {
         right: 10%;
     }
-    #contSiono{
+
+    #contSiono {
         right: 22%;
     }
-    #contIlumina{
+
+    #contIlumina {
         right: 15%;
     }
-    #contManodedios{
+
+    #contManodedios {
         left: 25%;
     }
-    .sections{
+
+    .sections {
         font-size: 1.6em;
     }
-    .sections:hover{
+
+    .sections:hover {
         font-size: 1.4em;
     }
-    .textCont p{
+
+    .textCont p {
         font-size: 1.7em;
     }
-    .textCont h1{
+
+    .textCont h1 {
         font-size: 2.2em;
     }
 }
 
-@media (min-width: 768px) { 
-    #hero{
+@media (min-width: 768px) {
+    #hero {
         background-size: 50% auto;
     }
-    #siono{
+
+    #siono {
         background-size: 70% auto;
     }
-    #manodedios{
+
+    #manodedios {
         background-size: 50% auto;
     }
-    #ilumina{
+
+    #ilumina {
         background-size: 45% auto;
     }
-    #hero p{
+
+    #hero p {
         right: 5%;
         bottom: 75%;
     }
-    #title{
+
+    #title {
         font-size: 2.9em;
-    } 
-    #subtitle{
+    }
+
+    #subtitle {
         font-size: 1.8em;
     }
-    #question{
+
+    #question {
         font-size: 2.4em;
     }
-    #msg{
+
+    #msg {
         font-size: 2.2em;
     }
-    #textHero{
+
+    #textHero {
         right: 10%;
     }
-    #textHero{
+
+    #textHero {
         left: 20%;
         right: 10%;
     }
-    #contSiono{
+
+    #contSiono {
         right: 28%;
     }
-    #contIlumina{
+
+    #contIlumina {
         right: 20%;
     }
-    #contManodedios{
+
+    #contManodedios {
         left: 35%;
     }
-    .sections{
+
+    .sections {
         font-size: 1.8em;
     }
-    .sections:hover{
+
+    .sections:hover {
         font-size: 1.6em;
     }
-    .textCont p{
+
+    .textCont p {
         font-size: 1.9em;
     }
-    .textCont h1{
+
+    .textCont h1 {
         font-size: 2.4em;
     }
 }
- 
-@media (min-width: 1024px) { 
-    #hero{
+
+@media (min-width: 1024px) {
+    #hero {
         background-size: 40% auto;
     }
-    #siono{
+
+    #siono {
         background-size: 60% auto;
     }
-    #manodedios{
+
+    #manodedios {
         background-size: 40% auto;
     }
-    #ilumina{
+
+    #ilumina {
         background-size: 35% auto;
     }
-    #title{
+
+    #title {
         font-size: 3.2em;
-    } 
-    #subtitle{
+    }
+
+    #subtitle {
         font-size: 2em;
     }
-    #question{
+
+    #question {
         font-size: 2.6em;
     }
-    #msg{
+
+    #msg {
         font-size: 2.4em;
     }
-    #textHero{
+
+    #textHero {
         left: 20%;
         right: 10%;
     }
-    #contSiono{
+
+    #contSiono {
         right: 38%;
     }
-    #contIlumina{
+
+    #contIlumina {
         right: 30%;
     }
-    #contManodedios{
+
+    #contManodedios {
         left: 40%;
     }
-    .sections{
+
+    .sections {
         font-size: 1.9em;
     }
-    .sections:hover{
+
+    .sections:hover {
         font-size: 1.7em;
     }
-    .textCont p{
+
+    .textCont p {
         font-size: 2.1em;
     }
-    .textCont h1{
+
+    .textCont h1 {
         font-size: 2.6em;
     }
-    
+
 }
- 
-@media (min-width: 1280px) { 
-    #hero{
+
+@media (min-width: 1280px) {
+    #hero {
         background-size: 35% auto;
     }
-    #siono{
+
+    #siono {
         background-size: 50% auto;
     }
-    #manodedios{
+
+    #manodedios {
         background-size: 35% auto;
     }
-    #ilumina{
+
+    #ilumina {
         background-size: 30% auto;
     }
-    #title{
+
+    #title {
         font-size: 3.6em;
-    } 
-    #subtitle{
+    }
+
+    #subtitle {
         font-size: 2.3em;
     }
-    #question{
+
+    #question {
         font-size: 2.8em;
     }
-    #msg{
+
+    #msg {
         font-size: 2.6em;
     }
-    #textHero{
+
+    #textHero {
         left: 25%;
         right: 10%;
     }
-    #contSiono{
+
+    #contSiono {
         right: 42%;
     }
-    #contIlumina{
+
+    #contIlumina {
         right: 35%;
     }
-    #contManodedios{
+
+    #contManodedios {
         left: 45%;
     }
-    .sections{
+
+    .sections {
         font-size: 2em;
     }
-    .sections:hover{
+
+    .sections:hover {
         font-size: 1.8em;
     }
-    .textCont p{
+
+    .textCont p {
         font-size: 2.3em;
     }
-    .textCont h1{
+
+    .textCont h1 {
         font-size: 2.8em;
     }
 }
- 
-@media (min-width: 1536px) { 
-    #hero{
+
+@media (min-width: 1536px) {
+    #hero {
         background-size: 30% auto;
     }
-    #siono{
+
+    #siono {
         background-size: 40% auto;
     }
-    #manodedios{
+
+    #manodedios {
         background-size: 30% auto;
     }
-    #ilumina{
+
+    #ilumina {
         background-size: 25% auto;
     }
-    #hero p{
+
+    #hero p {
         right: 5%;
         right: 40%;
     }
-    #title{
+
+    #title {
         font-size: 4em;
-    } 
-    #subtitle{
+    }
+
+    #subtitle {
         font-size: 2.5em;
     }
-    #question{
+
+    #question {
         font-size: 3em;
     }
-    #msg{
+
+    #msg {
         font-size: 2.8em;
     }
-    #textHero{
+
+    #textHero {
         left: 30%;
         right: 5%;
     }
-    #contSiono{
+
+    #contSiono {
         right: 45%;
     }
-    #contIlumina{
+
+    #contIlumina {
         right: 40%;
     }
-    #contManodedios{
+
+    #contManodedios {
         left: 45%;
     }
-    .sections{
+
+    .sections {
         font-size: 2.1em;
     }
-    .sections:hover{
+
+    .sections:hover {
         font-size: 1.9em;
     }
-    
-    .textCont p{
+
+    .textCont p {
         font-size: 2.4em;
     }
-    .textCont h1{
+
+    .textCont h1 {
         font-size: 3em;
     }
 }
